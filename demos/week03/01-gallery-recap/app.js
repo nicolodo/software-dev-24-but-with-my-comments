@@ -112,6 +112,7 @@ window.addEventListener("keydown", (event) => {
 
 toggle.addEventListener("click", () => {
   if (isShown) {
+    // We're using style.display to change the visibility/layout of the element, with 'display = "none"' to hide it
     thumbnailContainer.style.display = "none";
     isShown = false;
     toggle.style.top = "5vh";
