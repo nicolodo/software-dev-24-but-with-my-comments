@@ -34,8 +34,7 @@ function handleSubmit(event) {
 
 form.addEventListener('submit', handleSubmit)
 
-
-
+console.dir(new String('hello'))
 
 
 
