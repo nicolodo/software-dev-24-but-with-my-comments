@@ -1,0 +1,19 @@
+img {
+    height: 26vh;
+    width: auto;
+}
+
+
+.shop-item {
+    background-color: blanchedalmond;
+    margin: 10px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buy-button {
+    height: min-content;
+}
