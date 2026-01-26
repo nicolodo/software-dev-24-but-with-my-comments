@@ -15,7 +15,7 @@ cookieCountDisplay.innerText = state.cookies;
 image.addEventListener("click", function () {
   state.cookies++;
   cookieCountDisplay.innerText = state.cookies;
-  console.log(state.cookies);
+console.log(state.cookies);
 });
 
 // local storage is a requirement!!!
