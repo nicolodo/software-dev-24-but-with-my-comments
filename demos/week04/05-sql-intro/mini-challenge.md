@@ -13,7 +13,7 @@ First, we need a place to store our data. Open the **SQL Editor** in Supabase an
 
 ```sql
 CREATE TABLE gallery (
-  id SERIAL PRIMARY KEY,
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   title TEXT NOT NULL,
   artist TEXT NOT NULL,
   year_created INT,
