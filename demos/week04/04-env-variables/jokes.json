@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "joke": "what do you call a cow that can play piano?",
+      "punchline": "Moosical"
+    },
+    {
+      "id": 2,
+      "joke": "Why don’t skeletons fight each other?",
+      "punchline": "They don’t have the guts."
+    },
+    {
+      "id": 3,
+      "joke": "Why did the JavaScript developer go broke?",
+      "punchline": "Because he kept using var when he should’ve used let."
+    },
+    {
+      "id": 4,
+      "joke": "What’s a computer’s favorite beatle song?",
+      "punchline": "“Help!” – every time the user opens Task Manager."
+    },
+    {
+      "id": 5,
+      "joke": "Why do cows wear bells?",
+      "punchline": "Because their horns don’t work."
+    },
+    {
+      "id": 6,
+      "joke": "Why don’t eggs tell jokes?",
+      "punchline": "They’d crack each other up."
+    },
+    {
+      "id": 7,
+      "joke": "Why did the tomato blush?",
+      "punchline": "Because it saw the salad dressing."
+    },
+    {
+      "id": 8,
+      "joke": "What did the zero say to the eight?",
+      "punchline": "Nice belt!"
+    },
+    {
+      "id": 9,
+      "joke": "Why did the golfer bring two pairs of pants?",
+      "punchline": "In case he got a hole in one."
+    },
+    {
+      "id": 10,
+      "joke": "What’s orange and sounds like a parrot?",
+      "punchline": "A carrot."
+    },
+    {
+      "id": 11,
+      "joke": "Why did the bicycle fall over?",
+      "punchline": "It was two-tired."
+    },
+    {
+      "id": 12,
+      "joke": "Why don’t scientists trust atoms?",
+      "punchline": "Because they make up everything."
+    },
+    {
+      "id": 13,
+      "joke": "Why do bees have sticky hair?",
+      "punchline": "Because they use honeycombs."
+    },
+    {
+      "id": 14,
+      "joke": "What do you call fake spaghetti?",
+      "punchline": "An impasta."
+    },
+    {
+      "id": 15,
+      "joke": "Why did the math book look sad?",
+      "punchline": "It had too many problems."
+    },
+    {
+      "id": 16,
+      "joke": "Why can’t your nose be 12 inches long?",
+      "punchline": "Because then it would be a foot."
+    },
+    {
+      "id": 17,
+      "joke": "What do you call cheese that isn’t yours?",
+      "punchline": "Nacho cheese."
+    },
+    {
+      "id": 18,
+      "joke": "Why don’t some couples go to the gym?",
+      "punchline": "Because some relationships don’t work out."
+    },
+    {
+      "id": 19,
+      "joke": "How does the moon cut its hair?",
+      "punchline": "Eclipse it."
+    },
+    {
+      "id": 20,
+      "joke": "What kind of music do mummies listen to?",
+      "punchline": "Wrap music."
+    }
+  ]

@@ -72,3 +72,27 @@ function createBigImage(imageData) {
 // }
 
 // FiveAddFive(10)
+
+
+
+document.addEventListener("keydown", function(event) {
+    console.log(event)
+})
+
+
+
+const mypets = [
+    {
+        my,
+        alt: 'Hello'
+    }
+]
+
+
+
+const myname = 'Sam'
+
+
+const myObject = {
+    myname
+}

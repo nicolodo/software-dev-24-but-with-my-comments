@@ -14,7 +14,6 @@ countToTen()
 
 
 function sum(a,b) {
-    // we can use the debugger statement to pause execution when we're in the sources tab
-    debugger;
+    // we can use the debugger statement to pause execution when we're in the sources tab;
     return a + b
 }
