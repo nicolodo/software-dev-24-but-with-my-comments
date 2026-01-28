@@ -23,7 +23,16 @@ const db = new pg.Pool({
 
 // route handler
 app.get('/', (request, response) => {
+    console.log("boring get request")
     response.json({"message": "hello"})
+})
+
+// I need my server to listen for a POST request to http://localhost:7070/jokes
+app.post('/jokes', (request, response) => {
+
+    console.log(request.body)
+    console.log('Someone maade request to me!!')
+    response.json({"message": "you hit the post route on the express server!"})
 })
 
 
