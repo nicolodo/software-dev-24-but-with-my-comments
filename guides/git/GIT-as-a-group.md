@@ -52,6 +52,11 @@ Tip: Each branch should be made based on each feature, not page. For example, so
 
 `git push --set-upstream origin branchName`
 
+or, as a shorthand:
+`git push -u origin head`
+
+`head` will automatically be replaced with your branchName. 
+
 - This will make your branch visible on GitHub to other team members and set the upstream to push to your specific branch. Double check to make sure your new branch is there by going to your organization on GitHub, then to branches.
 
 ## Adding, Committing, and Pushing
@@ -74,7 +79,7 @@ Tip: Each branch should be made based on each feature, not page. For example, so
 
 ## Merging Main Into Your Branch
 
-11. You should keep your branch up-to-date with main. First, commit any changes on your branch. Make sure your work is in good shape and committed, so it won't be a difficult process if there are conflicts.
+11. You should keep your branch up-to-date with main, mainly if changes have been made to main that you need. First, commit any changes on your branch. Make sure your work is in good shape and committed, so it won't be a difficult process if there are conflicts.
 
 ```sh
 # on your branch
