@@ -1,0 +1,8 @@
+/* we need this line to sort of 'activate tailwind' */
+@import "tailwindcss";
+
+
+
+p {
+    font-family: monospace;
+}
