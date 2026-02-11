@@ -30,3 +30,6 @@ export const images = [
       author: "Maxime Lebrun",
     },
   ];
+
+
+export const sam = 'Hello'
