@@ -1,0 +1,1 @@
+export const style = 'background-color: darkblue; color: white; font-style: italic; border: 2px solid hotpink; font-size: 1em;'
