@@ -10,7 +10,7 @@ export default function App() {
 
   // takes two arguments:
   // a callback function -> inside that cbf, put the code in that you only want to run at certain times
-  // a 'dependency' array. That array controls when the code inside the effect should run. If it's an empty array, the code inside the effect on runs on the *first* render of the component
+  // a 'dependency' array. That array controls when the code inside the effect should run. If it's an empty array, the code inside the effect on runs on the *first* render of th component
   useEffect(() => {
     console.log("%cVery important code!!!!!! That will cause destruction if run more than once", style2);
   }, []);
