@@ -1,5 +1,5 @@
 import Image from "./components/Image"
-import { images, sam } from "./stores/imageData"
+import { images } from "./stores/imageData"
 
 export default function App() {
 
