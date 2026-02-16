@@ -1,5 +1,5 @@
 // react router gives us a function called 'useParams'
-import { useParams } from "react-router";
+import { useParams, Outlet } from "react-router";
 import { findPlant } from "../plantInfo";
 
 export default function IndividualPlantPage() {
@@ -11,7 +11,8 @@ export default function IndividualPlantPage() {
   return (
     <section>
       <p>This is a page for single plants information</p>
-
+      {/* outlet is a placeholder for if the user goes to a nested route - like /plants/1/photos - we'll display that extra element where the outlet is */}
+      <Outlet />
       {plantDetails ? (
         <div>
           <p>{plantDetails.name}</p>

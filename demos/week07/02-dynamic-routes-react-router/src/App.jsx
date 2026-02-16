@@ -5,21 +5,30 @@ import IndividualPlantPage from "./pages/IndividualPlantPage";
 export default function App() {
   return (
     <div>
-    <BrowserRouter>
-      <header>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/plants">Plants</Link>
-        </nav>
-      </header>
-      <Routes>
-        <Route path="/" element={<p>Home route</p>} />
-        <Route path="/plants" element={<PlantsPage />} />
-        {/* anythign after /plants/WHATEVER will render the below */}
-        {/* eg /plants/2 */}
-        {/* /plants/42432-sam */}
-        <Route path="/plants/:id" element={<IndividualPlantPage />} />
-      </Routes>
+      <BrowserRouter>
+        <header>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/plants">Plants</Link>
+          </nav>
+        </header>
+        <Routes>
+          <Route path="/" element={<p>Home route</p>} />
+          <Route path="/plants" element={<PlantsPage />} />
+          {/* anythign after /plants/WHATEVER will render the below */}
+          {/* eg /plants/2 */}
+          {/* /plants/42432-sam */}
+          <Route path="/plants/:id" element={<IndividualPlantPage />}>
+            {/* show photo? */}
+            {/* http://localhost:5173/plants/3/photos */}
+            <Route
+              path="/plants/:id/photos"
+              element={<p>photos of the plant</p>}
+            />
+            {/* edit a plant */}
+            <Route path="/plants/:id/edit" element={<p>Edit the plant</p>} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </div>
   );
