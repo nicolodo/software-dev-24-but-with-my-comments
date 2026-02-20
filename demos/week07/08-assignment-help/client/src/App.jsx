@@ -1,12 +1,17 @@
 import { Route, Routes } from "react-router";
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import Animals from "./pages/Animals";
+import AnimalPage from "./pages/AnimalPage";
 
 export default function App() {
   return (
-    <div>
-      <h2 className="text-red-400">My app</h2>
+    <div className="w-full mx-20 mt-5">
+      <Header />
       <Routes>
-        <Route path="/" element={<p>Hello</p>} />
-        <Route path='/animals' element={<p>Animals page</p>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path='/animals' element={<Animals />} />
+        <Route path='/animals/:id' element={<AnimalPage />} />
       </Routes>
     </div>
   )
