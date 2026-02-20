@@ -7,6 +7,7 @@ export default function Header() {
             <nav className="flex flex-row gap-5">
                 <Link to='/'>Home</Link>
                 <Link to='/animals'>Animals</Link>
+                <Link to='/new-animal'>Add a new animal</Link>
             </nav>
         </div>
     )

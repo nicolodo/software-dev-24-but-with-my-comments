@@ -115,6 +115,20 @@ app.delete(`/animals/:id`, async (req, res) => {
   }
 });
 
+
+app.get('/habitats', async (req, res) => {
+  const habitats = (await db.query(`SELECT * FROM habitats`)).rows
+  res.status(200).json(habitats)
+})
+
+
+app.post('/animals/:id/habitats/:habitatId', async (req, res) => {
+  // for inserting into our animals_habitats table
+  const result =(await db.query(`INSERT INTO animals_habitats (animal_id, habitat_id) VALUES ($1, $2)`, [req.params.id, req.params.habitatId])).rows
+
+  res.status(201).json(result)
+})
+
 app.listen(8080, () => {
   console.log(`server running on http://localhost:8080/`);
 });

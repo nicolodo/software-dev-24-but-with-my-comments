@@ -28,3 +28,20 @@ select animals.*, array_agg(
                 on animals_habitats.habitat_id = habitats.id
                 where animals.id = $1
                 group by animals.id
+
+
+
+
+create table recipes (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    image_url TEXT,
+    name TEXT,
+    description TEXT,
+)
+
+create table comments (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    comment TEXT
+    recipe_id REFERENCES recipes(id)
+)
+

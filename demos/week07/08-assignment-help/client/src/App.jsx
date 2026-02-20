@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import Animals from "./pages/Animals";
 import AnimalPage from "./pages/AnimalPage";
+import AddAnimalPage from "./pages/AddAnimalPage";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path='/animals' element={<Animals />} />
         <Route path='/animals/:id' element={<AnimalPage />} />
+        <Route path='/new-animal' element={<AddAnimalPage />} />
       </Routes>
     </div>
   )
