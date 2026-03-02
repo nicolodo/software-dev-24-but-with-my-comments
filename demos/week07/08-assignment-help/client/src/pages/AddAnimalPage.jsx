@@ -1,3 +1,4 @@
+import { redirect } from "react-router"
 import AnimalForm from "../components/AnimalForm"
 export default function AddAnimalPage() {
     return (
@@ -20,6 +21,6 @@ async function handleSubmit(e) {
         method: "POST",
         body: JSON.stringify(comment)
     })
-
+    redirect('/posts')
     // check db to see if inserted
 }
