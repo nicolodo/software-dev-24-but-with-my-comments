@@ -3,8 +3,8 @@ export default async function Page({params}) {
     // {id: whatevertheIDis}
     const {id} = await params
 
-    const res = await fetch(`https://dummyjson.com/products/${id}`)
-    const product = await res.json()
+    const product = await(await fetch(`https://dummyjson.com/products/${id}`)).json()
+    // const product = await res.json()
 
     console.log(product)
 
