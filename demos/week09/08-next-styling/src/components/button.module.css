@@ -1,0 +1,5 @@
+/* We have to make a 'button' class because modules don't less us use element selectors */
+/* It needs to be a pure selector */
+.button {
+  background-color: red;
+}
