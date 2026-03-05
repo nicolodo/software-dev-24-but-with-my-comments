@@ -23,11 +23,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav>
-          <Link href='/'>Home</Link>
-          <Link href="/books">Books</Link>
+        <nav className="flex items-center gap-6 px-6 py-4 bg-gray-900 text-white">
+          <Link href='/' className="hover:text-gray-300 font-semibold">Home</Link>
+          <Link href="/books" className="hover:text-gray-300 font-semibold">Books</Link>
+          <Link href="/add-book" className="hover:text-gray-300 font-semibold">Add a new book</Link>
         </nav>
-        {children}
+        <main className="max-w-5xl mx-auto px-6 py-8">
+          {children}
+        </main>
       </body>
     </html>
   );
