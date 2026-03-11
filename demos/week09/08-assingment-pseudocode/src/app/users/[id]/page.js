@@ -1,18 +1,17 @@
 import { getUser } from "@/utils/getUser"
+import { db } from "@/utils/connect"
+import Link from "next/link"
 
-export default async function UserPage() {
-
+export default async function UserPage({params}) {
+    const {id} = await params
     // this will always read the currently looged in user
-    // could we read from params to get other user profiles? 
-    const user = await getUser()
+    // could we read from params to get other user profiles?
 
-    console.log(user[0])
+    // stretch goal
+
     return (
         <div>
-            <p>This is the user page</p>
-            <p>{user[0].username}</p>
-            <p>bio: </p>
-            <p>{user[0].bio}</p>
+            <p>display stuff</p>
         </div>
     )
 }

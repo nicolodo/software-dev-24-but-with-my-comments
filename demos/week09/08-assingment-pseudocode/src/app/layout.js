@@ -1,6 +1,7 @@
 import { ClerkProvider, Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { Unna } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 const unna = Unna({
   weight: "400",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
               <UserButton />
             </Show>
           </header>
+          <NavBar />
           {children}</ClerkProvider>
       </body>
     </html>
