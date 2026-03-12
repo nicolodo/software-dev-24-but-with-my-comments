@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+----- Clerk
+Clerk is a service which handles, signing in for us
+It's configured on the clerk website to do things like allow paths for
+people to sign in with 
+e.g Google, Facebook or Github.
 
-First, run the development server:
+Things done in clerk intro are
+Importing clerk
+retrieving id and other user info from Clerk
+Creating a route for a user page on the site
+Displaying said data on our site
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Clerk is setup in the layout.js file in order to have clerk be accessible
+to every page on our website
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Auth() and currentUser()
+are promises which return data from Clerk
+Auth() -> id
+currentUser() -> obj w/ userdata eg name, profilePic etc
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+----- Image
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+In order to use the image component 
+/jsconfig.json
+is told
 
-## Learn More
+const nextConfig = {
+  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
+  },
+};
+I don't know what this means but I'm guessing 
+it's for when the protocol is https and not http or ftp
+and the hostname can be anything bc of the ** wildcard
+I would've thought a single * would do the same thing
+but maybe that's just nextjs's way of writing *
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+----- Nicolas's changes
+/app/page.js Changed
+I have removed all the content from this page because it was unused, so it just contained the boilerplate nextjs content.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+----- Used/Modified/Added pages for this lesson
+M
+/app/page.js
+/app/layout.js
+A
+/app/users
+/app/about-us
+M
+/next.config.mjs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
