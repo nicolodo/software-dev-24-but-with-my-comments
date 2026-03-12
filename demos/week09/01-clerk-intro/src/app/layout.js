@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import {
   ClerkProvider,
-  Show,
-  SignInButton,
+  Show, //Show,SignIn&UpButton & UserButton are all Clerk components
+  SignInButton, // that we can use on the page
   SignUpButton,
   UserButton,
 } from "@clerk/nextjs";
@@ -29,10 +29,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+            {/* Code added start*/}
         <ClerkProvider>
-          <header className="flex justify-end items-center p-4 gap-4 h-16">
-            <Show when="signed-out">
-              <SignInButton />
+          <header className="flex justify-end items-center p-4 gap-4 h-16"> {/* Tailwind css styling for the header*/}
+            <Show when="signed-out"> {/* Clerk's <Show/> will only its content when we meet it's condition*/}
+              <SignInButton /> {/* Show a sign in/ sign up button or if signed in the UserButton */}
               <SignUpButton>
                 <button className="bg-[#6c47ff] text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 cursor-pointer">
                   Sign Up
@@ -43,8 +44,9 @@ export default function RootLayout({ children }) {
               <UserButton />
             </Show>
           </header>
-          {children}
+          {children} {/* The page we are on */}
         </ClerkProvider>
+            {/* Code added end */}
       </body>
     </html>
   );
