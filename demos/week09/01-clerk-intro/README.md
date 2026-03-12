@@ -11,13 +11,18 @@ retrieving id and other user info from Clerk
 Creating a route for a user page on the site
 Displaying said data on our site
 
+    setup
 Clerk is setup in the layout.js file in order to have clerk be accessible
 to every page on our website
+To talk to Clerk add it's info to a .env file
+
 
 Auth() and currentUser()
 are promises which return data from Clerk
 Auth() -> id
 currentUser() -> obj w/ userdata eg name, profilePic etc
+
+
 
 ----- Image
 
@@ -42,19 +47,42 @@ and the hostname can be anything bc of the ** wildcard
 I would've thought a single * would do the same thing
 but maybe that's just nextjs's way of writing *
 
-
------ Nicolas's changes
-/app/page.js Changed
-I have removed all the content from this page because it was unused, so it just contained the boilerplate nextjs content.
-
-
 ----- Used/Modified/Added pages for this lesson
 M
-/app/page.js
-/app/layout.js
+<!-- /app/page.js  --> This is left unmodified
+/src/app/layout.js N:comments added
 A
-/app/users
-/app/about-us
+/src/app/users
+/src/app/about-us
 M
-/next.config.mjs
+/src/proxy.js    //Protected routes configured here
+/next.config.mjs //config added to allow images to show
+/README.md 
 
+----- Nicolas's changes
+<!-- /app/page.js Changed -->
+<!-- I have removed all the content from this page because it was unused, so it just contained the boilerplate nextjs content. -->
+Rewrote this README.md to log changes
+
+    --- Tangent
+
+In the terminal
+use this script in the weeks directory to cd into each dir
+and run npm install
+by replacing ls with the command you'd like to run in each dir
+
+for d in *;   
+cd $d && pwd && ls && cd ..
+
+save space afterwards
+by deleting the node_modules folder afterwards
+rm -rf node_modules 
+or
+rm -rI node_modules
+
+-f is force the deletes and don't prompt
+-I is ask me whenever I delete a folder or more than 3 files
+-i is ask me for every file to delete
+-r is recursive ie go into every folder and delete the contents
+
+go for rm -rf
