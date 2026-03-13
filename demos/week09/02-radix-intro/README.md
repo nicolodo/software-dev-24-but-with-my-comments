@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+----- This lesson covers Component Libraries & Icon Collections
+----- RadixUI
+https://www.radix-ui.com/
+RadixUI is a collection of components we can use on our site
+to show things like cards for the user profile, checkboxes, dropdown Menus etc
+https://www.radix-ui.com/themes/playground
+have a look here there's lots of visual examples for them.
+It's useful as we can pick premade components, to give our pages a visual look.
 
-First, run the development server:
+----- item2
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+----- Used/Modified/Added pages for this lesson
+A
+/app/themes/page.js & layout.js // tried out themed components here
+A
+NComponents.jsx
+NPopover.jsx & styles.css
+/components/Themed/TComponents.jsx
+M
+package.json & package-lock.json //installing radix themes
+/app/page.js //tried out some new components here
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+----- Nicolas's changes
+per the radix ui instructionns I am putting the import in layout.js, this is not done in this example. 
+I think this is because we aren't using themes.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I have imported some components and put them in the components folder.
+the ones I've made begin with N.
 
-## Learn More
+There's a lot of extra configuring when not using themes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+install radix ui but with themes and create 
+theme components.
+Make sure the imports are right when importing
+as the primitive radix and the themed radix 
+come from different libraries.
+    --- Tangent
