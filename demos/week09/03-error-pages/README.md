@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+----- This lesson covers Error Pages
 
-First, run the development server:
+----- Used/Modified/Added pages for this lesson
+A
+/app/books
+/app/error.js
+M
+/app/page.js // + <TextHightlight/> & <CausesError/>
+/app/layout.js // links to home and books page
+A
+/components/CausesError.jsx
+/components/TextHighlight.jsx
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+----- Nicolas's changes
+If you want to use the books route properly 
+setup a .env file with to a db containing a "books" table
+which has an "id" "title" & "author" & "img_url" column.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    --- Tangent
+sql
+CREATE TABLE books(
+	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+	title TEXT,
+	author TEXT,
+	img_url TEXT
+);
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+INSERT INTO books (title, author, img_url) VALUES
+('The Great Gatsby', 'F. Scott Fitzgerald', 'https://picsum.photos/seed/gatsby/300/400'),
+('The Pragmatic Programmer', 'Andrew Hunt', 'https://picsum.photos/seed/pragmatic/300/400'),
+('1984', 'George Orwell', 'https://picsum.photos/seed/1984/300/400'),
+('Clean Code', 'Robert C. Martin', 'https://picsum.photos/seed/cleancode/300/400'),
+('The Hobbit', 'J.R.R. Tolkien', 'https://picsum.photos/seed/hobbit/300/400'),
+('Eloquent JavaScript', 'Marijn Haverbeke', 'https://picsum.photos/seed/eloquent/300/400');
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+https://picsum.photos/
+A self described Lorem Ipsum for photos

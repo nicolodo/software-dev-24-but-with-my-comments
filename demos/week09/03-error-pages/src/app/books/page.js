@@ -6,6 +6,7 @@ import TextHightlight from "@/components/TextHighlight";
 export default async function Page() {
     // setup our connection
     const db = new pg.Pool({connectionString: process.env.DB_CONN})
+    console.log(db)
 
     const responseFromDB = await db.query(`select * from books`)
     const books = responseFromDB.rows
